@@ -35,19 +35,11 @@ public class FractalDrawer {
 	// TODO:
 	// drawTriangleFractal draws a triangle fractal using recursive techniques
 	public void drawTriangleFractal(double width, double height, double x, double y, Color c, Canvas can, int level) {
-		if(level < 18) {
-			double angle = ((2*Math.PI)/15)*level;
-			double radius = 200 - (level * 10);
-			Triangle tri = new Triangle(x + radius*Math.cos(angle), y + radius*Math.sin(angle), width, height);
-			tri.setColor(c);
-			can.drawShape(tri);
-			
-		
-			width = width * 0.9;
-			height = height * 0.9;
-			c = Main.randCol();
-			level++;
-			drawTriangleFractal(width, height, x, y, c, can, level);
+		if(level < 7) {
+			//draw triangle
+			//change position, color and whatever else for the next triangle
+			//increase level by one
+			//recursivley call this function
 		}
 	}
 
@@ -60,17 +52,10 @@ public class FractalDrawer {
 	// drawRectangleFractal draws a rectangle fractal using recursive techniques
 	public void drawRectangleFractal(double width, double height, double x, double y, Color c, Canvas can, int level) {
 		if(level < 7) {
-			Rectangle rect = new Rectangle(x, y, width, height);
-			rect.setColor(c);
-			can.drawShape(rect);
-			
-			x = x + width * 0.75;
-			y = y + height * 0.75;
-			width = width * 0.75;
-			height = height * 0.75;
-			c = Main.randCol();
-			level++;
-			drawRectangleFractal(width, height, x, y, c, can, level);
+			//draw rectangle
+			//change position, color and whatever else for the next rectangle
+			//increase level by one
+			//recursivley call this function
 		}
 	}
 }
