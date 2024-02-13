@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.Color;
 import java.util.Scanner;
 
 public class Main {
@@ -13,7 +14,7 @@ public class Main {
 		FractalDrawer fd = new FractalDrawer();
 		
 		Scanner input = new Scanner(System.in);
-		while(answer = false) {
+		while(answer == false) {
 			System.out.println("Enter a number to choose a shape: ");
 			System.out.println("\t1: circle\n\t2: triangle\n\t3:rectangle");
 			int ans = input.nextInt();
@@ -34,5 +35,13 @@ public class Main {
 					System.out.println("Invalid shape");
 			}
 		}
+	}
+	
+	public static Color randCol() {
+		int r = (int) (Math.random() * (255));
+		int g = (int) (Math.random() * (255));
+		int b = (int) (Math.random() * (255));
+		int o = (int) (Math.random() * (255));
+		return new Color(r, g, b, o);
 	}
 }
