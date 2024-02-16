@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static ArrayList<Color> colorset1 = new ArrayList<Color>();
+	public static ArrayList<Color> colorset2 = new ArrayList<Color>();
 	
 	// TODO:
 	// main should ask user for shape input, and then draw the corresponding
@@ -17,6 +18,11 @@ public class Main {
 		colorset1.add(new Color(240,230,140));
 		colorset1.add(new Color(34,139,34));
 		colorset1.add(new Color(0,0,0));
+		
+		colorset2.add(new Color(102, 10, 96));
+		colorset2.add(new Color(200, 80, 176));
+		colorset2.add(new Color(30, 115, 190));
+		colorset2.add(new Color(232, 0, 0));
 		
 		boolean answer = false;
 		
@@ -30,15 +36,18 @@ public class Main {
 			switch(ans) {
 				case 1:
 					answer = true;
-					fd.drawFractal("circle");
+					System.out.print("Total Area: ");
+					System.out.println(fd.drawFractal("circle"));
 					break;
 				case 2:
 					answer = true;
-					fd.drawFractal("triangle");
+					System.out.print("Total Area: ");
+					System.out.println(fd.drawFractal("triangle"));
 					break;
 				case 3:
 					answer = true;
-					fd.drawFractal("rectangle");
+					System.out.print("Total Area: ");
+					System.out.println(fd.drawFractal("rectangle"));
 					break;
 				default:
 					System.out.println("Invalid shape");

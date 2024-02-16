@@ -3,8 +3,9 @@ package main;
 import java.awt.Color;
 import java.lang.Math;
 
+//Circle class represents a circle with specified position, dimensions, and color
 public class Circle {
-
+	
 	private double x, y;
 	private double radius;
 	

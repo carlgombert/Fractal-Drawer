@@ -2,6 +2,7 @@ package main;
 
 import java.awt.Color;
 
+//Rectangle class represents a rectangle with specified position, dimensions, and color
 public class Rectangle {
 
 	private double x, y;

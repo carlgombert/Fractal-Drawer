@@ -2,6 +2,7 @@ package main;
 
 import java.awt.Color;
 
+// Triangle class represents a triangle with specified position, dimensions, and color
 public class Triangle {
 
 	private double x, y;
