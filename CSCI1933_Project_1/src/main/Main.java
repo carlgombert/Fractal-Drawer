@@ -1,14 +1,23 @@
 package main;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+	public static ArrayList<Color> colorset1 = new ArrayList<Color>();
+	
 	// TODO:
 	// main should ask user for shape input, and then draw the corresponding
 	// fractal.
 	// should print area of fractal
 	public static void main(String[] args) {
+		
+		colorset1.add(new Color(75,0,130));
+		colorset1.add(new Color(240,230,140));
+		colorset1.add(new Color(34,139,34));
+		colorset1.add(new Color(0,0,0));
+		
 		boolean answer = false;
 		
 		FractalDrawer fd = new FractalDrawer();
@@ -41,7 +50,6 @@ public class Main {
 		int r = (int) (Math.random() * (255));
 		int g = (int) (Math.random() * (255));
 		int b = (int) (Math.random() * (255));
-		int o = (int) (Math.random() * (255));
-		return new Color(r, g, b, o);
+		return new Color(r, g, b);
 	}
 }
