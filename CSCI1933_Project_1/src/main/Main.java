@@ -5,30 +5,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-	public static ArrayList<Color> colorset1 = new ArrayList<Color>();
-	public static ArrayList<Color> colorset2 = new ArrayList<Color>();
 	
-	// TODO:
-	// main should ask user for shape input, and then draw the corresponding
+	// main asks user for shape input, and then draws the corresponding
 	// fractal.
-	// should print area of fractal
+	// prints area of fractal
 	public static void main(String[] args) {
-		
-		colorset1.add(new Color(75,0,130));
-		colorset1.add(new Color(240,230,140));
-		colorset1.add(new Color(34,139,34));
-		colorset1.add(new Color(0,0,0));
-		
-		colorset2.add(new Color(102, 10, 96));
-		colorset2.add(new Color(200, 80, 176));
-		colorset2.add(new Color(30, 115, 190));
-		colorset2.add(new Color(232, 0, 0));
 		
 		boolean answer = false;
 		
 		FractalDrawer fd = new FractalDrawer();
 		
 		Scanner input = new Scanner(System.in);
+		
+		// Ask user to enter a shape and repeat until they enter an acceptable number
 		while(answer == false) {
 			System.out.println("Enter a number to choose a shape: ");
 			System.out.println("\t1: circle\n\t2: triangle\n\t3:rectangle");
@@ -55,6 +44,7 @@ public class Main {
 		}
 	}
 	
+	// Generates a random color, used by the triangle fractal
 	public static Color randCol() {
 		int r = (int) (Math.random() * (255));
 		int g = (int) (Math.random() * (255));

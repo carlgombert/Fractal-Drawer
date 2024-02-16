@@ -2,12 +2,28 @@ package main;
 
 //FractalDrawer class draws a fractal of a shape indicated by user input
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FractalDrawer {
+	
+	// Arraylists to hold color combinations to be used in fractals
+	public static ArrayList<Color> colorset1 = new ArrayList<Color>();
+	public static ArrayList<Color> colorset2 = new ArrayList<Color>();
+		
 	private double totalArea = 0; // member variable for tracking the total area
 
 	public FractalDrawer() {
+		// Initialize colors for color arraylists
+		colorset1.add(new Color(75,0,130));
+		colorset1.add(new Color(240,230,140));
+		colorset1.add(new Color(34,139,34));
+		colorset1.add(new Color(0,0,0));
+		
+		colorset2.add(new Color(102, 10, 96));
+		colorset2.add(new Color(200, 80, 176));
+		colorset2.add(new Color(30, 115, 190));
+		colorset2.add(new Color(232, 0, 0));
 	}
 
 	// drawFractal method initiates the drawing of a fractal based on the specified type
@@ -56,6 +72,7 @@ public class FractalDrawer {
 			can.drawShape(tri4);
 			totalArea += tri4.calculateArea();
 			
+			
 			level++;
 			
 			// Recursively repeat this inside each of the triangles surrounding the middle triangle
@@ -69,7 +86,7 @@ public class FractalDrawer {
 	public void drawCircleFractal(double radius, double x, double y, Color c, Canvas can, int level) {
 		// Only repeat process for 7 levels
 		if(level < 7) {
-			c = Main.colorset2.get(level%4);
+			c = colorset2.get(level%4);
 			
 			// Draw the main circle
 			Circle cir = new Circle(x, y, radius);
@@ -77,7 +94,7 @@ public class FractalDrawer {
 			can.drawShape(cir);
 			totalArea += cir.calculateArea();
 			
-			c = Main.colorset2.get((level+1)%4);
+			c = colorset2.get((level+1)%4);
 			
 			// Draw smaller circles on all sides of main circle
 			Circle cir2 = new Circle(x-radius, y, radius/2);
@@ -100,6 +117,7 @@ public class FractalDrawer {
 			can.drawShape(cir5);
 			totalArea += cir5.calculateArea();
 			
+			
 			level++;
 			
 			// Recursively repeat this inside each of the smaller circles
@@ -114,7 +132,7 @@ public class FractalDrawer {
 	public void drawRectangleFractal(double width, double height, double x, double y, Color c, Canvas can, int level) {
 		// Only repeat process for 8 levels
 		if(level < 8) {
-			c = Main.colorset1.get(level%4);
+			c = colorset1.get(level%4);
 			
 			// Draw main rectangle in the center
 			Rectangle rec = new Rectangle(x - width/2, y - height/2, width, height);
@@ -122,7 +140,7 @@ public class FractalDrawer {
 			can.drawShape(rec);
 			totalArea += rec.calculateArea();
 			
-			c = Main.colorset1.get((level+1)%4);
+			c = colorset1.get((level+1)%4);
 			
 			// Draw smaller rectangles on all four corners of the main rectangle
 			Rectangle rec2 = new Rectangle(x - (3*width)/4, y - (3*height)/4, width/2, height/2);
@@ -144,6 +162,7 @@ public class FractalDrawer {
 			rec5.setColor(c);
 			can.drawShape(rec5);
 			totalArea += rec5.calculateArea();
+			
 			
 			level++;
 			
