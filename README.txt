@@ -1,15 +1,20 @@
-Group members’ names and x500s
-Contributions of each partner (if working with a partner)
-How to compile and run your program
-Any assumptions
-Additional features that you implemented (if applicable)
-Any known bugs or defects in the program
-Any outside sources (aside from course resources) consulted for ideas used in the project,
-in the format:
-– idea1: source
-– idea2: source
-– idea3: source
-Include the statement: “I certify that the information contained in this
+Group members’ names and x500s:
+  Carl Gombert, gombe004
+
+Contributions of each partner:
+  Carl:
+    Implemented fractal drawing and main method
+  Madison:
+    Implemented shape classes
+
+How to compile and run program:
+  1. Open a bash terminal in the project folder
+  2. Enter the command: java -jar project_1_runnable.jar
+  3. Once you choose the shape and load the fractal the image will not load fully right away, you must resize the window a bit
+
+
+I certify that the information contained in this
 README file is complete and accurate. I have both read and followed
 the course policies in the ‘Academic Integrity - Course Policy’ section of
-the course syllabus.” and type your name(s) underneath.
+the course syllabus.
+Carl Gombert
