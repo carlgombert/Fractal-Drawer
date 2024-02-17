@@ -1,5 +1,6 @@
 Group members’ names and x500s:
   Carl Gombert, gombe004
+  Madison Kosobucki, kosob014
 
 Contributions of each partner:
   Carl:
@@ -18,3 +19,4 @@ README file is complete and accurate. I have both read and followed
 the course policies in the ‘Academic Integrity - Course Policy’ section of
 the course syllabus.
 Carl Gombert
+Madison Kosobucki
